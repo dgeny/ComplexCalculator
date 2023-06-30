@@ -1,10 +1,15 @@
+import java.util.logging.Logger;
+
 import presenter.Presenter;
 import test.Crunch;
 
 public class App {
+    static Logger appLogger = Logger.getLogger("Application");
     public static void main(String[] args) throws Exception {
+        appLogger.info("started");
         Presenter app = new Presenter();
         app.startCalc();
+        appLogger.info("ended");
     }
     /* 
      * +++++++  MODEL ++++++++++++++++++++++

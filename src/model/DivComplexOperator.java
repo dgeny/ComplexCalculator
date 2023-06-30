@@ -1,6 +1,9 @@
 package model;
 
+import java.util.logging.Logger;
+
 public class DivComplexOperator extends Operator<ComplexOperand> {
+    Logger log = Logger.getAnonymousLogger();
     public DivComplexOperator(){
         super();
         super.textRepresentation = "/";
@@ -18,6 +21,7 @@ public class DivComplexOperator extends Operator<ComplexOperand> {
                 (v*x - u*y)/(x*x + y*y)
             );
         }
+        log.severe("Divide by zero! Raised exception...");
         throw new Exception("Divide by zero");
     }
     
